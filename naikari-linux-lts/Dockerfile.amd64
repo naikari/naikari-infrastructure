@@ -1,4 +1,4 @@
-FROM centos:7
+FROM rockylinux:8
 
 LABEL org.opencontainers.image.authors "Naev Dev Team"
 LABEL org.opencontainers.image.source "https://github.com/naikari/naikari-infrastructure"
