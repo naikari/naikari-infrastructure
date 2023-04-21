@@ -1,4 +1,4 @@
-name: Naev Infrastructure Deployment
+name: Naikari Infrastructure Deployment
 on:
   push:
     tags:

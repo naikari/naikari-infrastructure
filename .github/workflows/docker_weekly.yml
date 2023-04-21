@@ -1,4 +1,4 @@
-name: Naev Infrastructure Weekly Build
+name: Naikari Infrastructure Weekly Build
 on:
   workflow_dispatch:
   schedule:

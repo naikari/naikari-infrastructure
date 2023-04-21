@@ -1,4 +1,4 @@
-name: Naev Infrastructure Testing
+name: Naikari Infrastructure Testing
 on: [push, pull_request]
 
 jobs:
