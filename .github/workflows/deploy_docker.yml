@@ -10,7 +10,7 @@ jobs:
     permissions:
       contents: write
       packages: write
-    uses: naev/naev-infrastructure/.github/workflows/docker_build.yml@main
+    uses: naikari/naikari-infrastructure/.github/workflows/docker_build.yml@main
     with:
       publish: true
   create_release:

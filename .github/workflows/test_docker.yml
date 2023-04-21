@@ -3,6 +3,6 @@ on: [push, pull_request]
 
 jobs:
   test_images:
-    uses: naev/naev-infrastructure/.github/workflows/docker_build.yml@main
+    uses: naikari/naikari-infrastructure/.github/workflows/docker_build.yml@main
     with:
       publish: false

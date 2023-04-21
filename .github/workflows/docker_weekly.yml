@@ -22,7 +22,7 @@ jobs:
       contents: write
       packages: write
     needs: update_tag
-    uses: naev/naev-infrastructure/.github/workflows/docker_build.yml@main
+    uses: naikari/naikari-infrastructure/.github/workflows/docker_build.yml@main
     with:
       publish: true
   create_release:

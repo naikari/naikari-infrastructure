@@ -16,47 +16,44 @@ jobs:
       fail-fast: true
       matrix:
         include:
-          - context: "naev-artwork/blender2.79b"
+          - context: "naikari-artwork/blender2.79b"
             arch: amd64
-            imagename: "naev-artwork"
+            imagename: "naikari-artwork"
             blender: "blender2.79b"
-          - context: "naev-docs"
+          - context: "naikari-linux-lts"
             arch: amd64
-            imagename: "naev-docs"
-          - context: "naev-linux-lts"
+            imagename: "naikari-linux-lts"
+          - context: "naikari-linux-latest"
             arch: amd64
-            imagename: "naev-linux-lts"
-          - context: "naev-linux-latest"
+            imagename: "naikari-linux-latest"
+          - context: "naikari-release"
             arch: amd64
-            imagename: "naev-linux-latest"
-          - context: "naev-release"
+            imagename: "naikari-release"
+          - context: "naikari-steamruntime"
             arch: amd64
-            imagename: "naev-release"
-          - context: "naev-steamruntime"
+            imagename: "naikari-steamruntime"
+          - context: "naikari-steamfrankenruntime"
             arch: amd64
-            imagename: "naev-steamruntime"
-          - context: "naev-steamfrankenruntime"
+            imagename: "naikari-steamfrankenruntime"
+          - context: "naikari-windows"
             arch: amd64
-            imagename: "naev-steamfrankenruntime"
-          - context: "naev-windows"
+            imagename: "naikari-windows"
+          - context: "naikari-macos"
             arch: amd64
-            imagename: "naev-windows"
-          - context: "naev-macos"
-            arch: amd64
-            imagename: "naev-macos"
-          - context: "naev-macos"
+            imagename: "naikari-macos"
+          - context: "naikari-macos"
             arch: aarch64
-            imagename: "naev-macos"
+            imagename: "naikari-macos"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Generate image metadata
         id: docker_meta
-        if: ${{ matrix.arch != 'aarch64' || matrix.imagename == 'naev-artwork' }}
+        if: ${{ matrix.arch != 'aarch64' || matrix.imagename == 'naikari-artwork' }}
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/naev/${{ matrix.imagename }}
+          images: ghcr.io/naikari/${{ matrix.imagename }}
           flavor: |
             latest=${{ inputs.publish }}
       - name: Generate image metadata (aarch64)
@@ -64,15 +61,15 @@ jobs:
         if: ${{ matrix.arch == 'aarch64' }}
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/naev/${{ matrix.imagename }}
+          images: ghcr.io/naikari/${{ matrix.imagename }}
           flavor: |
             suffix=-${{ matrix.arch }},onlatest=true
       - name: Generate image metadata (artwork)
         id: docker_meta_artwork
-        if: ${{ matrix.imagename == 'naev-artwork' }}
+        if: ${{ matrix.imagename == 'naikari-artwork' }}
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/naev/${{ matrix.imagename }}
+          images: ghcr.io/naikari/${{ matrix.imagename }}
           flavor: |
             suffix=-${{ matrix.blender }},onlatest=true
       - name: Set up QEMU

@@ -59,11 +59,11 @@ FROM registry.gitlab.steamos.cloud/steamrt/scout/sdk:latest
 COPY --from=build /opt /usr/local 
 
 LABEL org.opencontainers.image.authors "Naev Dev Team"
-LABEL org.opencontainers.image.source "https://github.com/naev/naev-infrastructure"
+LABEL org.opencontainers.image.source "https://github.com/naikari/naikari-infrastructure"
 LABEL org.opencontainers.image.description "Used for linux steam builds in the steamruntime (scout) environment, lots of nasty hacks here.. don't look."
 
 # Allows for determining what container scripts are run in.
-ENV IMAGE_NAME "naev-steamfrankenruntime"
+ENV IMAGE_NAME "naikari-steamfrankenruntime"
 
 # Add official ppa repository that provides Git 2.19 and update
 RUN echo "deb https://ppa.launchpadcontent.net/git-core/ppa/ubuntu precise main " | sudo tee -a /etc/apt/sources.list.d/git-core.list && \
