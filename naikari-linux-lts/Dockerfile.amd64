@@ -10,12 +10,8 @@ ENV IMAGE_NAME "naikari-linux-lts"
 WORKDIR /tmp
 # Enable the EPEL and End Point repositories for additional up-to-date tools.
 RUN dnf -y install epel-release && \
-    curl -L -O https://packages.endpointdev.com/endpoint-rpmsign-8.pub &&\
-    rpm --import endpoint-rpmsign-8.pub && \
-    curl -L -O https://packages.endpointdev.com/rhel/8/main/x86_64/endpoint-repo.noarch.rpm && \
-    rpm -i endpoint-repo.noarch.rpm && \
-    rm -rf /tmp/endpoint-repo.x86_64.rpm endpoint-rpmsign-8.pub && \
     crb enable && \
+    dnf -y install https://packages.endpointdev.com/rhel/8/main/x86_64/endpoint-repo.noarch.rpm && \
 # Install Build dependencies.
     dnf -y install meson ninja-build gcc binutils-devel enet-devel fontconfig-devel freetype-devel \
     gettext-devel glpk-devel file libpng12-devel libxml2-devel libvorbis-devel libwebp-devel \
