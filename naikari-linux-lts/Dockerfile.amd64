@@ -28,7 +28,6 @@ RUN apt-get update && \
 # Verify ninja version and installation.
     echo "Verifying ninja install" && \
     command -v ninja && \
-    ninja --version && \
 # Verify git version and installation.
     echo "Verifying git install" && \
     command -v git && \
