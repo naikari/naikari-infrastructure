@@ -1,3 +1,6 @@
+### 1.7.5
+* Switched back to Debian 10, making use of Ninja from the Debian repo.
+
 ### 1.7.4
 * Switched back to Debian 11 "Bullseye" for Linux LTS.
 
