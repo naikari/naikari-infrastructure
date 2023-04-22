@@ -1,4 +1,4 @@
-FROM debian:11
+FROM debian:10
 
 LABEL org.opencontainers.image.authors "Naikari Dev Team"
 LABEL org.opencontainers.image.source "https://github.com/naikari/naikari-infrastructure"
