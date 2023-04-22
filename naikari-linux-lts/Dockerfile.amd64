@@ -8,8 +8,8 @@ LABEL org.opencontainers.image.description "Used for release builds. oldest targ
 ENV IMAGE_NAME "naikari-linux-lts"
 
 # Install Build dependencies.
-RUN apt update && \
-    apt install -y build-essential libsdl2-dev libsdl2-image-dev \
+RUN apt-get update && \
+    apt-get install -y build-essential libsdl2-dev libsdl2-image-dev \
     libgl1-mesa-dev libxml2-dev libfreetype6-dev libpng-dev libwebp-dev \
     libopenal-dev libvorbis-dev binutils-dev libiberty-dev autopoint intltool \
     libfontconfig-dev python3-pip libluajit-5.1-dev libphysfs-dev \
@@ -25,6 +25,10 @@ RUN apt update && \
     echo "Verifying meson install" && \
     command -v meson && \
     meson --version && \
+# Verify ninja version and installation.
+    echo "Verifying ninja install" && \
+    command -v ninja && \
+    ninja --version && \
 # Verify git version and installation.
     echo "Verifying git install" && \
     command -v git && \
