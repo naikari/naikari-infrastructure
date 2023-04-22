@@ -2,12 +2,10 @@
 This repository contains Dockerfiles for all of the [Naikari Project](https://github.com/naikari/naikari)'s CI and CD build images, and Github Actions workflows.
 
 ### Overview:
-- `naikari-linux-archaic` (Used for old release builds)
-- `naikari-linux-latest` (Used for CI, testing and soundtrack builds.)
-- `naikari-linux-lts` (Used for release builds. oldest targetted glibc platform)
+- `naikari-linux-latest` (Used for CI and testing.)
+- `naikari-linux-lts` (Used for release builds. Oldest targeted glibc platform)
 - `naikari-macos` (Used to cross compile for macOS.)
 - `naikari-release` (Used for packaging releases)
-- `naikari-steamruntime` (Used for linux steam builds in the steamruntime (soldier) environment)
 - `naikari-windows` (Used to cross compile for Windows.)
 
 
