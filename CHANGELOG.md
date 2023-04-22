@@ -1,4 +1,4 @@
-### 1.7.1
+### 1.7.2
 * Switched to Debian 10 "Buster" for Linux LTS.
 * Removed naikari-linux-archaic, naikari-steamruntime, and
   naikari-steamfrankenruntime.
