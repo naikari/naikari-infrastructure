@@ -1,3 +1,6 @@
+### 1.7.3
+* Removed installation of glpk (which Naikari doesn't use).
+
 ### 1.7.2
 * Switched to Debian 10 "Buster" for Linux LTS.
 * Removed naikari-linux-archaic, naikari-steamruntime, and
