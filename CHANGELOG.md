@@ -1,3 +1,6 @@
+### 1.7.4
+* Switched back to Debian 11 "Bullseye" for Linux LTS.
+
 ### 1.7.3
 * Removed installation of glpk (which Naikari doesn't use).
 
