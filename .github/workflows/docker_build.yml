@@ -29,12 +29,6 @@ jobs:
           - context: "naikari-release"
             arch: amd64
             imagename: "naikari-release"
-          - context: "naikari-steamruntime"
-            arch: amd64
-            imagename: "naikari-steamruntime"
-          - context: "naikari-steamfrankenruntime"
-            arch: amd64
-            imagename: "naikari-steamfrankenruntime"
           - context: "naikari-windows"
             arch: amd64
             imagename: "naikari-windows"
