@@ -16,7 +16,7 @@ RUN apt-get update && \
     libunibreak-dev ninja-build \
 # Install utilities
     git nano tar texinfo xz-utils unzip zip && \
-    python3 -m pip install meson ninja PyYAML && \
+    python3 -m pip install meson PyYAML && \
 # Verify python version and install location.
     echo "Verifying python install" && \
     command -v python3 && \
