@@ -38,7 +38,7 @@ WORKDIR /tmp
 # Install GH CLI repository and utilities
 RUN microdnf --nodocs --setopt=install_weak_deps=0 -y install meson ninja-build gcc python3-pyyaml git tar xz unzip zip \
 # Install SteamCMD and friends
-    glibc.i686 SDL2.i686 && \
+    glibc.i686 SDL3.i686 && \
     microdnf clean all && \
 # Download and install SteamCMD
     curl -L -O http://media.steampowered.com/installer/steamcmd_linux.tar.gz && \

@@ -1,3 +1,7 @@
+### 1.8
+* Updated everything to install SDL3 instead of SDL2.
+* Switched from Debian 10 to Debian 13 for Linux LTS.
+
 ### 1.7.6
 * Removed weekly builds.
 
